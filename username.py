@@ -32,7 +32,6 @@ class Username(ob.Plugin):
                 href = elm.get_attribute('href')
                 text = elm.get_attribute('innerText')
                 if "Registered" in text:
-                    print('text', text)
                     blueprint = username_profile.create(
                         profile_link=href,
                     )

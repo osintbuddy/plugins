@@ -11,6 +11,7 @@ class URL(ob.Plugin):
     ]
     author = "team@OSINTBuddy"
     icon = "link"
+    description = "URLs usually start with https://"
 
     @ob.transform(label="To website", icon="world-www")
     async def transform_to_website(self, node, **kwargs):
