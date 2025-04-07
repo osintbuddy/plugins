@@ -14,7 +14,7 @@ class Website(ob.Plugin):
         TextInput(label="Domain", icon="world-www"),
     ]
 
-    author = "team@OSINTBuddy"
+    author = "OSIB"
     description = "Represents a websites domain"
 
     @ob.transform(label="To IP", icon="building-broadcast-tower")

@@ -13,7 +13,7 @@ class GoogleSearch(ob.Plugin):
         TextInput(label="Pages", icon="123", value="3"),
     ]
     icon = "brand-google-filled"
-    author = "team@OSINTBuddy"
+    author = "OSIB"
     description = "Search google using the advanced operators you're used to"
 
     @ob.transform(label="To results")

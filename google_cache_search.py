@@ -13,7 +13,7 @@ class GoogleCacheSearch(ob.Plugin):
         TextInput(label="Query", icon="search"),
         TextInput(label="Pages", icon="123", default="3"),
     ]
-    author = "team@OSINTBuddy"
+    author = "OSIB"
     description = "Search the google cache"
     icon = "brand-google-filled"
     

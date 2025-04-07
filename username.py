@@ -13,8 +13,8 @@ class Username(ob.Plugin):
         TextInput(label="Username", icon="user-search"),
     ]
     icon = "user-search"
-    author = ["team@OSINTBuddy", "Artemii"]
-    description = "Investigate usernames and their links"
+    author = ["OSIB", "Artemii"]
+    description = "Investigate usernames used as identification"
 
     @ob.transform(label='To checkuser.vercel.app', icon='user')
     async def transform_to_checkuser(self, node, use):

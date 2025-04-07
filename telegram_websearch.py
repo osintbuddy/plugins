@@ -6,7 +6,7 @@ class TelegramWebsearch(ob.Plugin):
     color = "#2AABEE"
     icon = "brand-telegram"
 
-    author = "team@OSINTBuddy"
+    author = "OSIB"
     description = "Web search for telegram communities"
 
     entity = [

@@ -9,6 +9,7 @@ class DNS(ob.Plugin):
     label = "DNS"
     color = "#2181B5"
     icon = "creative-commons-nd"
+    description = "The Domain Name System translates domains into IPs"
     entity = [
         TextInput(label="Value", icon="file-description"),
         DropdownInput(label="Record Type", options=[
@@ -42,7 +43,7 @@ class DNS(ob.Plugin):
         "DNAME",
     ]
 
-    author = ["team@OSINTBuddy", "Bugfest"]
+    author = ["OSIB", "Bugfest"]
 
     @classmethod
     def data_template(cls):

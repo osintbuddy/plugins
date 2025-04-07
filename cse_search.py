@@ -38,7 +38,7 @@ class CSESearch(ob.Plugin):
     label = "CSE Search"
 
     description = 'Search through hundreds of categorized custom search engines from Google'
-    author = "team@OSINTBuddy"
+    author = "OSIB"
     icon = "brand-google-filled"
     color = "#2C7237"
     entity = [

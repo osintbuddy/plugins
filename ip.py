@@ -13,8 +13,8 @@ class IP(ob.Plugin):
     color = "#F47C00"
     entity = [TextInput(label="IP Address", icon="map-pin")]
     icon = "building-broadcast-tower"
-    author = "team@OSINTBuddy"
-    description = "IP address"
+    author = "OSIB"
+    description = "Internet Protocol address"
 
     @ob.transform(label="To website", icon="world")
     async def transform_to_website(self, node, use):

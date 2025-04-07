@@ -11,4 +11,4 @@ class Whois(ob.Plugin):
         [CopyText(label="raw whois data", icon="world-search"), Empty()],
     ]
     icon = "world-search"
-    author = "team@OSINTBuddy"
+    author = "OSIB"

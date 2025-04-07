@@ -6,7 +6,7 @@ class CSESearchResultsPlugin(ob.Plugin):
     is_available = False
     color = "#058F63"
     icon = "brand-google-filled"
-    author = "team@OSINTBuddy"
+    author = "OSIB"
     
     entity = [
         Title(label="title"),

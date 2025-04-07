@@ -5,7 +5,7 @@ class IPGeolocation(ob.Plugin):
     label = "IP Geolocation"
     is_available = False
     entity = "map-pin"
-    author = "team@OSINTBuddy"
+    author = "OSIB"
     color = "#FFCC33"
     entity = [
         [

@@ -9,7 +9,7 @@ class GoogleResult(ob.Plugin):
     color = "#308e49"
     entity = [Title(label="result"), CopyText(label="url")]
     icon = "brand-google-filled"
-    author = "team@OSINTBuddy"
+    author = "OSIB"
 
     @ob.transform(label="To website", icon="world")
     async def transform_to_website(self, node, use):

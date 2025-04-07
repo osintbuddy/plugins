@@ -14,7 +14,7 @@ class GoogleCacheResult(ob.Plugin):
         ],
     ]
     icon = "brand-google-filled"
-    author = "team@OSINTBuddy"
+    author = "OSIB"
 
     @ob.transform(label="To website", icon="world-www")
     async def transform_to_website(self, node, use):

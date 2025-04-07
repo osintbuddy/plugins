@@ -9,9 +9,9 @@ class URL(ob.Plugin):
     entity = [
         TextInput(label="URL", icon="link"),
     ]
-    author = "team@OSINTBuddy"
+    author = "OSIB"
     icon = "link"
-    description = "URLs usually start with https://"
+    description = "Uniform Resource Locator (URL) usually starts with https://"
 
     @ob.transform(label="To website", icon="world-www")
     async def transform_to_website(self, node, **kwargs):
