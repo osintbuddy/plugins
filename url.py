@@ -11,7 +11,7 @@ class URL(ob.Plugin):
     ]
     author = "OSIB"
     icon = "link"
-    description = "Uniform Resource Locator (URL) usually starts with https://"
+    description = "Uniform Resource Locator, usually starts with https://"
 
     @ob.transform(label="To website", icon="world-www")
     async def transform_to_website(self, node, **kwargs):

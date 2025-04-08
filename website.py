@@ -15,7 +15,7 @@ class Website(ob.Plugin):
     ]
 
     author = "OSIB"
-    description = "Represents a websites domain"
+    description = "Represents an internet domain"
 
     @ob.transform(label="To IP", icon="building-broadcast-tower")
     async def transform_to_ip(self, node, use):
