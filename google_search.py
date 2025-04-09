@@ -12,7 +12,7 @@ class GoogleSearch(ob.Plugin):
         TextInput(label="Query", icon="search"),
         TextInput(label="Pages", icon="123", value="3"),
     ]
-    icon = "brand-google-filled"
+    icon = "brand-google"
     author = "OSIB"
     description = "Search google using the advanced operators you're used to"
 

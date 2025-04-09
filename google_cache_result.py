@@ -13,7 +13,7 @@ class GoogleCacheResult(ob.Plugin):
             CopyText(label="URL"),
         ],
     ]
-    icon = "brand-google-filled"
+    icon = "brand-google"
     author = "OSIB"
 
     @ob.transform(label="To website", icon="world-www")

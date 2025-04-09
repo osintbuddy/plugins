@@ -15,7 +15,7 @@ class GoogleCacheSearch(ob.Plugin):
     ]
     author = "OSIB"
     description = "Search the google cache"
-    icon = "brand-google-filled"
+    icon = "world-search"
     
     @ob.transform(label="To cache results")
     async def transform_to_google_cache_results(self, node, use):

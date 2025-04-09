@@ -8,7 +8,7 @@ class GoogleResult(ob.Plugin):
     is_available = False
     color = "#308e49"
     entity = [Title(label="result"), CopyText(label="url")]
-    icon = "brand-google-filled"
+    icon = "brand-google"
     author = "OSIB"
 
     @ob.transform(label="To website", icon="world")
