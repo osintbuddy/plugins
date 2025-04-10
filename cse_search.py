@@ -9,22 +9,6 @@ from osintbuddy.errors import OBPluginError
 import osintbuddy as ob
 
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0',
-    'Accept': '*/*',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'DNT': '1',
-    'Sec-GPC': '1',
-    'Connection': 'keep-alive',
-    'Upgrade-Insecure-Requests': '1',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'none',
-    'Sec-Fetch-User': '?1',
-    'Pragma': 'no-cache',
-    'Cache-Control': 'no-cache',
-}
-
 cse_link_options = []
 try:
     import requests
@@ -32,9 +16,9 @@ try:
     cse_link_options = json.loads(resp.text)
 except Exception as e:
     print('Error loading CSE categories!', e)
-    
 
-class CSESearch(ob.Plugin):
+
+class GoogleCSESearch(ob.Plugin):
     label = "CSE Search"
 
     description = 'Search through hundreds of categorized custom search engines from Google'
@@ -92,6 +76,21 @@ class CSESearch(ob.Plugin):
         re_exp = re.compile('(?<=exp":\s)(.*?)(])')
         re_cse_lib_version = re.compile('(?<=cselibVersion":\s")(.*?)(?=")')
         async with httpx.AsyncClient() as client:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0',
+                'Accept': '*/*',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'DNT': '1',
+                'Sec-GPC': '1',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1',
+                'Sec-Fetch-Dest': 'document',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'none',
+                'Sec-Fetch-User': '?1',
+                'Pragma': 'no-cache',
+                'Cache-Control': 'no-cache',
+            }
             results_response = await client.get(f"https://cse.google.com/cse.js?sca_esv={cx_param.split(':')[0][0:11]}&hpg=1&cx={cx_param}", headers=headers, timeout=None)
             html = results_response.content.decode("utf8")
             cse_token = re_token.search(html)[1]

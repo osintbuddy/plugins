@@ -12,3 +12,4 @@ class Whois(ob.Plugin):
     ]
     icon = "world-search"
     author = "OSIB"
+    description = "Whois.com allows you to trace the ownership and tenure of a domain name or an IP address"
