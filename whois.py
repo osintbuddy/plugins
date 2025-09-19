@@ -5,11 +5,11 @@ import osintbuddy as ob
 class Whois(ob.Plugin):
     label = "Whois"
     is_available = False
-    color = "#F47C00"
-    entity = [
-        [TextAreaInput(label="Whois Data")],
-        [CopyText(label="raw whois data", icon="world-search"), Empty()],
+    color = "#F47C0099"
+    elements = [
+        TextAreaInput(label="Raw WHOIS"),
+        [Empty(), Empty()]
     ]
-    icon = "world-search"
+    icon = "world-question"
     author = "OSIB"
-    description = "Whois.com allows you to trace the ownership and tenure of a domain name or an IP address"
+    description = "whois.com allows you to trace the ownership and tenure of a domain name or an IP address"

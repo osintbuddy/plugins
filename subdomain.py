@@ -6,8 +6,8 @@ class Subdomain(ob.Plugin):
     label = "Subdomain"
     is_available = True
     description = "A domain that is a part of another domain"
-    color = "#272ebe"
-    entity = [
+    color = "#093FB499"
+    elements = [
         TextInput(label="Subdomain", icon="world"),
     ]
     icon = "submarine"

@@ -3,13 +3,13 @@ from osintbuddy.elements import TextInput
 
 class TelegramWebsearch(ob.Plugin):
     label = "Telegram Websearch"
-    color = "#2AABEE"
+    color = "#2AABEEaa"
     icon = "brand-telegram"
 
     author = "OSIB"
     description = "Web search for telegram communities"
 
-    entity = [
+    elements = [
         TextInput(label="Query", icon="search")
     ]
 
@@ -18,12 +18,13 @@ class TelegramWebsearch(ob.Plugin):
         "https://cse.google.com/cse?cx=004805129374225513871:p8lhfo0g3hg",
     ]
 
-    @ob.transform(label='To CSE Search', icon='')
-    async def transform_to_websearch(self, node, use):
+    @ob.transform(label='To CSE Search', icon='search')
+    async def to_websearch(self, entity):
+        print("ENTITY TO WEBSEARCH",  entity)
         cse_search_entity = await ob.Registry.get_plugin('cse_search')
         cse_plugin = cse_search_entity()
         results = []
         for url in self.telegram_cse_urls:
-            resp = await cse_plugin.get_cse_results(query=node.query, cse_url=url)
+            resp = await cse_plugin.get_cse_results(query=entity.query, url=url)
             results.append(await cse_plugin._map_cse_to_blueprint(resp=resp))
         return [result for cse_page in results for result in cse_page]

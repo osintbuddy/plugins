@@ -5,8 +5,8 @@ import osintbuddy as ob
 
 class URL(ob.Plugin):
     label = "URL"
-    color = '#642CA9'
-    entity = [
+    color = '#47139699'
+    elements = [
         TextInput(label="URL", icon="link"),
     ]
     author = "OSIB"
@@ -14,8 +14,8 @@ class URL(ob.Plugin):
     description = "Uniform Resource Locator, usually starts with https://"
 
     @ob.transform(label="To website", icon="world-www")
-    async def transform_to_website(self, node, **kwargs):
+    async def to_website(self, entity):
         print('ob.Registry.plugins: ', ob.Registry.plugins)
         website_entity = await ob.Registry.get_plugin('website')
-        domain = urlparse(node.url).netloc
+        domain = urlparse(entity.url).netloc
         return website_entity.create(domain=domain)

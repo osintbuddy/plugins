@@ -4,18 +4,18 @@ import osintbuddy as ob
 class UsernameProfile(ob.Plugin):
     label = "Username Profile"
     is_available = False
-    color = "#D842A6"
+    color = "#8d0a6199"
     icon = "user-scan"
     author = "OSIB"
     
-    entity = [
+    elements = [
         TextInput(label='Profile Link', icon='link'),
     ]
 
     @ob.transform(label="To URL", icon="link")
-    async def transform_to_url(self, node, use):
+    async def to_url(self, entity):
         url_entity = await ob.Registry.get_plugin('url')
         url_node = url_entity.create(
-            url=node.profile_link
+            url=entity.profile_link
         )
         return url_node

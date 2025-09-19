@@ -8,8 +8,8 @@ from selenium.webdriver.common.by import By
 
 class Username(ob.Plugin):
     label = "Username"
-    color = "#BF288D"
-    entity = [
+    color = "#BF288D99"
+    elements = [
         TextInput(label="Username", icon="user-search"),
     ]
     icon = "user-search"
@@ -17,10 +17,10 @@ class Username(ob.Plugin):
     description = "Investigate usernames used as identification"
 
     @ob.transform(label='To checkuser.vercel.app', icon='user')
-    async def transform_to_checkuser(self, node, use):
+    async def to_checkuser(self, entity):
         with use.get_driver() as driver:
             driver.get('https://checkuser.vercel.app/')
-            driver.find_element(By.XPATH, "/html/body/div/div/div/div/div/div[1]/div/div/input").send_keys(node.username)
+            driver.find_element(By.XPATH, "/html/body/div/div/div/div/div/div[1]/div/div/input").send_keys(entity.username)
             driver.find_element(By.XPATH, '//*[@id="button-addon2"]').click()
             WebDriverWait(driver, 90).until(
                 EC.text_to_be_present_in_element((By.XPATH, "/html/body/div/div/div/div/div/div[1]/div/h5"), "Total Scanned Services: 74 / 74")

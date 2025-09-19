@@ -1,13 +1,14 @@
 from osintbuddy.elements import Title, Empty, TextInput
 import osintbuddy as ob
 
+
 class IPGeolocation(ob.Plugin):
     label = "IP Geolocation"
     is_available = False
     icon = "map-pin"
     author = "OSIB"
-    color = "#FFCC33"
-    entity = [
+    color = "#03A79199"
+    elements = [
         [
             TextInput(label="City", icon="map-pin"),
             TextInput(label="ASN", icon="access-point"),
@@ -41,4 +42,3 @@ class IPGeolocation(ob.Plugin):
             TextInput(label="ASN type", icon="access-point"),
         ],
     ]
-

@@ -2,35 +2,35 @@ import socket
 from urllib.parse import urlparse
 from selenium.webdriver.common.by import By
 from osintbuddy.elements import TextInput
-from osintbuddy.errors import OBPluginError, NodeMissingValueError
+from osintbuddy.errors import PluginError
 import osintbuddy as ob
 
 
 class Website(ob.Plugin):
     label = "Website"
-    color = "#1D1DB8"
+    color = "#1D1DB899"
     icon = "world-www"
-    entity = [
+    elements = [
         TextInput(label="Domain", icon="world-www"),
     ]
 
     author = "OSIB"
-    description = "Represents an internet domain"
+    description = "Represents a domain from a website on the internet"
 
     @ob.transform(label="To IP", icon="building-broadcast-tower")
-    async def transform_to_ip(self, node, use):
-        IPAddressPlugin = await ob.Registry.get_plugin('ip')
-        blueprint = IPAddressPlugin.create(
-            ip_address=socket.gethostbyname(node.domain)
+    async def to_ip(self, entity):
+        ip_address_plugin = await ob.Registry.get_plugin('ip')
+        blueprint = ip_address_plugin.create(
+            ip_address=socket.gethostbyname(entity.domain),
         )
         return blueprint
 
     @ob.transform(label="To google", icon="world")
-    async def transform_to_google(self, node, use):
+    async def o_google(self, entity):
         results = []
         google_search_entity = await ob.Registry.get_plugin('google_search')
         for result in await google_search_entity().search_google(
-            query=node.domain, pages="3"
+            query=entity.domain, pages="3"
         ):
             google_result_entity = await ob.Registry.get_plugin('google_result')
             blueprint = google_result_entity.create(
@@ -45,8 +45,8 @@ class Website(ob.Plugin):
         return results
 
     @ob.transform(label="To WHOIS", icon="world")
-    async def transform_to_whois(self, node, use):
-        domain = node.domain
+    async def to_whois(self, entity):
+        domain = entity.domain
         if len(domain.split(".")) > 2:
             domain = domain.split(".")
             domain = domain[len(domain) - 2] + "." + domain[len(domain) - 1]
@@ -60,7 +60,7 @@ class Website(ob.Plugin):
                 ).text
             except Exception as e:
                 print(e)
-                raise OBPluginError(
+                raise PluginError(
                     "Captcha encountered, please try again later."
                 )
             whois_entity = await ob.Registry.get_plugin("whois")
@@ -70,17 +70,18 @@ class Website(ob.Plugin):
                 raw_whois_data=raw_whois
             )
 
+
     @ob.transform(label="To DNS", icon="world")
-    async def transform_to_dns(self, node, use):
+    async def to_dns(self, entity):
         dns_entity = await ob.Registry.get_plugin('dns')
         data = dns_entity.data_template()
 
-        if len(node.domain) == 0:
-            raise NodeMissingValueError(
+        if len(entity.domain) == 0:
+            raise PluginError(
                 "A website is required to process dns records"
             )
 
-        website = node.domain
+        website = entity.domain
         website_parsed = urlparse(website)
         if website_parsed.scheme:
             domain = website_parsed.netloc

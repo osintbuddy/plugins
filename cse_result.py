@@ -4,19 +4,18 @@ import osintbuddy as ob
 class CSESearchResultsPlugin(ob.Plugin):
     label = "CSE Result"
     is_available = False
-    color = "#058F63"
+    color = "#59A12866"
     icon = "brand-google"
     author = "OSIB"
     
-    entity = [
+    elements = [
         Title(label="title"),
         Text(label="breadcrumb"),
         Text(label="content"),
         CopyText(label="URL"),
-        CopyText(label="Cache URL"),
     ]
 
     @ob.transform(label="To URL", icon='link')
-    async def transform_to_url(self, node, **kwargs):
+    async def to_url(self, entity):
         url_entity = await ob.Registry.get_plugin('url')
-        return url_entity.create(url=node.url)
+        return url_entity.create(url=entity.url)

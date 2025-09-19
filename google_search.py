@@ -1,14 +1,14 @@
 import httpx
 from osintbuddy.elements import TextInput
-from osintbuddy.errors import OBPluginError, NodeMissingValueError
+from osintbuddy.errors import PluginError
 
 import osintbuddy as ob
 
 
 class GoogleSearch(ob.Plugin):
     label = "Google Search"
-    color = "#3D78D9"
-    entity: list[TextInput] = [
+    color = "#3D78D999"
+    elements = [
         TextInput(label="Query", icon="search"),
         TextInput(label="Pages", icon="123", value="3"),
     ]
@@ -17,11 +17,11 @@ class GoogleSearch(ob.Plugin):
     description = "Search google using the advanced operators you're used to"
 
     @ob.transform(label="To results")
-    async def transform_to_google_results(self, node, use):
-        # print("@todo refactor transform node API: ", node)
+    async def to_google_results(self, entity):
+        # print("@todo refactor transform entity API: ", entity)
         results = []
         google_result_entity = await ob.Registry.get_plugin('google_result')
-        for result in await self.search_google(node.query, node.pages):
+        for result in await self.search_google(entity.query, entity.pages):
             blueprint = google_result_entity.create(
                 result={
                     "title": result.get("title"),
@@ -66,7 +66,7 @@ class GoogleSearch(ob.Plugin):
 
     async def search_google(self, query, pages):
         if not query:
-            raise NodeMissingValueError("Query is a required field")
+            raise PluginError("Query is a required field")
         try:
             async with httpx.AsyncClient() as client:
                 google_resp = await client.get(
@@ -74,8 +74,8 @@ class GoogleSearch(ob.Plugin):
                     timeout=None
                 )
                 google_results = google_resp.json()
-        except OBPluginError:
-            raise OBPluginError((
+        except PluginError:
+            raise PluginError((
                 "There was an error crawling Google. Please try again."
                 "If you keep encountering this error please open an issue on Github."
             ))

@@ -7,10 +7,10 @@ import osintbuddy as ob
 
 class DNS(ob.Plugin):
     label = "DNS"
-    color = "#2181B5"
+    color = "#88304E99"
     icon = "creative-commons-nd"
     description = "The Domain Name System translates domains into IPs"
-    entity = [
+    elements = [
         TextInput(label="Value", icon="file-description"),
         DropdownInput(label="Record Type", options=[
             { "label": "NS" },
@@ -66,9 +66,9 @@ class DNS(ob.Plugin):
         }
 
     @ob.transform(label="Extract IP", icon="microscope")
-    async def transform_extract_ip(self, node, use) -> list:
-        data = node.value
-        ip_regexp = re.compile("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
+    async def transform_extract_ip(self, entity) -> list:
+        data = entity.value
+        ip_regexp = re.compile(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
         results = []
         IPAddressPlugin = await ob.Registry.get_plugin('ip')
         for ip in ip_regexp.findall(data):
