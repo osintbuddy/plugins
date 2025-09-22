@@ -160,7 +160,6 @@ class GoogleCSESearch(ob.Plugin):
                 'num': min(int(str(max_results)) if str(max_results).isdigit() else 20, 20),
                 'hl': 'en',
                 'source': 'gcsc',
-                'gss': '.com',
                 'cselibv': cse_lib_version,
                 'cx': cx_param,
                 'q': query or '',
