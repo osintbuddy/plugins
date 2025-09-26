@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Smartphone(ob.Plugin):
+    version = "1.0.0"
     label = "Smartphone"
     color = "#22C55E99"
     icon = "device-mobile"

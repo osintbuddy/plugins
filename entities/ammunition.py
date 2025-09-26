@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Ammunition(ob.Plugin):
+    version = "1.0.0"
     label = "Ammunition"
     color = "#9CA3AF99"
     icon = "bullet"

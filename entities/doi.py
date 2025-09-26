@@ -4,6 +4,7 @@ from osintbuddy.elements import TextInput, DropdownInput
 import osintbuddy as ob
 
 class DOI(ob.Plugin):
+    version = "1.0.0"
     label = "DOI"
     color = "#fab60899"
     icon = "object-scan"

@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class MeetingSocial(ob.Plugin):
+    version = "1.0.0"
     label = "Meeting Social"
     color = "#FB718599"
     icon = "users"

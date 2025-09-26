@@ -3,6 +3,7 @@ from osintbuddy import Plugin
 
 
 class UsernameProfile(Plugin):
+    version = "1.0.0"
     label = "Username Profile"
     is_available = False
     color = "#8d0a6199"

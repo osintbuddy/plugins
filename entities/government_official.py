@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class GovernmentOfficial(ob.Plugin):
+    version = "1.0.0"
     label = "Government Official"
     color = "#60A5FA99"
     icon = "shield"

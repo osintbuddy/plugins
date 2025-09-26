@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class TrainStation(ob.Plugin):
+    version = "1.0.0"
     label = "Train Station"
     color = "#A78BFA99"
     icon = "building-rail"

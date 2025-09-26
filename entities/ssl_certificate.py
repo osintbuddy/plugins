@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class SSLCertificate(ob.Plugin):
+    version = "1.0.0"
     label = "SSL Certificate"
     color = "#0EA5E999"
     icon = "certificate-2"

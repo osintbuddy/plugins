@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Child(ob.Plugin):
+    version = "1.0.0"
     label = "Child"
     color = "#60A5FA99"
     icon = "baby"

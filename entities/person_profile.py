@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class PersonProfile(ob.Plugin):
+    version = "1.0.0"
     label = "Person Profile"
     color = "#6366F199"
     icon = "user"

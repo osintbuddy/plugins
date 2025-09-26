@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Shop(ob.Plugin):
+    version = "1.0.0"
     label = "Shop"
     color = "#FDE04799"
     icon = "building-store"

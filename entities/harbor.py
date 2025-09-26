@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Harbor(ob.Plugin):
+    version = "1.0.0"
     label = "Harbor"
     color = "#38BDF899"
     icon = "anchor"

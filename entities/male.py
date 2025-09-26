@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Male(ob.Plugin):
+    version = "1.0.0"
     label = "Male"
     color = "#60A5FA99"
     icon = "gender-male"

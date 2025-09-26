@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class NameServer(ob.Plugin):
+    version = "1.0.0"
     label = "Name Server"
     color = "#EF444499"
     icon = "server"

@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class EthereumAddress(ob.Plugin):
+    version = "1.0.0"
     label = "Ethereum Address"
     color = "#6366F199"
     icon = "currency-ethereum"

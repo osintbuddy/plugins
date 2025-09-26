@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Judge(ob.Plugin):
+    version = "1.0.0"
     label = "Judge"
     color = "#60A5FA99"
     icon = "gavel"

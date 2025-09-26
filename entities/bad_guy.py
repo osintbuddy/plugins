@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class BadGuy(ob.Plugin):
+    version = "1.0.0"
     label = "Bad Guy"
     color = "#EF444499"
     icon = "user-minus"

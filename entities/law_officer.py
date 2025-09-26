@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class LawOfficer(ob.Plugin):
+    version = "1.0.0"
     label = "Law Officer"
     color = "#22C55E99"
     icon = "badge"

@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class BitcoinAddress(ob.Plugin):
+    version = "1.0.0"
     label = "Bitcoin Address"
     color = "#F59E0B99"
     icon = "currency-bitcoin"

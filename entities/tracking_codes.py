@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class TrackingCodes(ob.Plugin):
+    version = "1.0.0"
     label = "Tracking Codes"
     color = "#06B6D499"
     icon = "scan"

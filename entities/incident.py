@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Incident(ob.Plugin):
+    version = "1.0.0"
     label = "Incident"
     color = "#F59E0B99"
     icon = "alert-triangle"

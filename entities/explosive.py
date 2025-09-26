@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Explosive(ob.Plugin):
+    version = "1.0.0"
     label = "Explosive"
     color = "#F9731699"
     icon = "flame"

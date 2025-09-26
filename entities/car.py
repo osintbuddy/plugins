@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Car(ob.Plugin):
+    version = "1.0.0"
     label = "Car"
     color = "#3B82F699"
     icon = "car"

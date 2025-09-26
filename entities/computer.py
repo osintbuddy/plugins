@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Computer(ob.Plugin):
+    version = "1.0.0"
     label = "Computer"
     color = "#22D3EE99"
     icon = "device-desktop"

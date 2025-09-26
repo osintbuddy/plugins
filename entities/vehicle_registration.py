@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class VehicleRegistration(ob.Plugin):
+    version = "1.0.0"
     label = "Vehicle Registration"
     color = "#9CA3AF99"
     icon = "id"

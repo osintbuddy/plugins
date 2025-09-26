@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Prison(ob.Plugin):
+    version = "1.0.0"
     label = "Prison"
     color = "#94A3B899"
     icon = "building-arch"

@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class IdentificationNumber(ob.Plugin):
+    version = "1.0.0"
     label = "Identification Number"
     color = "#94A3B899"
     icon = "id"

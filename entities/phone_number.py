@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class PhoneNumber(ob.Plugin):
+    version = "1.0.0"
     label = "Phone Number"
     color = "#10B98199"
     icon = "phone"

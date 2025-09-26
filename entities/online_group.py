@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class OnlineGroup(ob.Plugin):
+    version = "1.0.0"
     label = "Online Group"
     color = "#A78BFA99"
     icon = "users"

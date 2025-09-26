@@ -3,6 +3,7 @@ import osintbuddy as ob
 
 
 class Whois(ob.Plugin):
+    version = "1.0.0"
     label = "Whois"
     is_available = False
     color = "#F47C0099"

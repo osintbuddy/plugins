@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class BusinessMan(ob.Plugin):
+    version = "1.0.0"
     label = "Business Man"
     color = "#22C55E99"
     icon = "tie"

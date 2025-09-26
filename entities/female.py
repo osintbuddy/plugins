@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Female(ob.Plugin):
+    version = "1.0.0"
     label = "Female"
     color = "#EC489999"
     icon = "gender-female"

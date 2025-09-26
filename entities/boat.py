@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Boat(ob.Plugin):
+    version = "1.0.0"
     label = "Boat"
     color = "#38BDF899"
     icon = "sailboat"

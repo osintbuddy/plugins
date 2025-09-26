@@ -3,6 +3,7 @@ from osintbuddy import Plugin
 
 
 class Username(Plugin):
+    version = "1.0.0"
     label = "Username"
     color = "#BF288D99"
     elements = [

@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Meeting(ob.Plugin):
+    version = "1.0.0"
     label = "Meeting"
     color = "#22C55E99"
     icon = "calendar"

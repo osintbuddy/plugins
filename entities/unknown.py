@@ -1,8 +1,9 @@
 import osintbuddy as ob
-from osintbuddy.elements import TextInput
+from osintbuddy.elements import TextAreaInput
 
 
 class Unknown(ob.Plugin):
+    version = "1.0.0"
     label = "Unknown"
     color = "#D1D5DB99"
     icon = "question-mark"
@@ -10,6 +11,6 @@ class Unknown(ob.Plugin):
     description = "Placeholder for unknown/unspecified entities."
 
     elements = [
-        TextInput(label="Notes", icon="notes"),
+        TextAreaInput(label="Notes", icon="notes"),
     ]
 

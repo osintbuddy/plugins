@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class OnionService(ob.Plugin):
+    version = "1.0.0"
     label = "Onion Service"
     color = "#4B556399"
     icon = "brand-tor"

@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class JavaScript(ob.Plugin):
+    version = "1.0.0"
     label = "JavaScript"
     color = "#EAB30899"
     icon = "brand-javascript"

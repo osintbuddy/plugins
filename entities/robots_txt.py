@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class RobotsTxt(ob.Plugin):
+    version = "1.0.0"
     label = "robots.txt"
     color = "#9CA3AF99"
     icon = "file-text"

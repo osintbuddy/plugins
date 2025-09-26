@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Region(ob.Plugin):
+    version = "1.0.0"
     label = "Region"
     color = "#60A5FA99"
     icon = "map"

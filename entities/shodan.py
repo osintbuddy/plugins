@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Shodan(ob.Plugin):
+    version = "1.0.0"
     label = "Shodan"
     color = "#22C55E99"
     icon = "database-search"

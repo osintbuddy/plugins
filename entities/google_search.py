@@ -2,6 +2,7 @@ from osintbuddy import Plugin
 from osintbuddy.elements import TextInput
 
 class GoogleSearch(Plugin):
+    version = "1.0.0"
     label = "Google Search"
     color = "#3D78D999"
     elements = [

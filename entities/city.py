@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class City(ob.Plugin):
+    version = "1.0.0"
     label = "City"
     color = "#60A5FA99"
     icon = "building"

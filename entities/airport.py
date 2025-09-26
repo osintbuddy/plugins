@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Airport(ob.Plugin):
+    version = "1.0.0"
     label = "Airport"
     color = "#3B82F699"
     icon = "plane"

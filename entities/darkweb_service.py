@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class DarkwebService(ob.Plugin):
+    version = "1.0.0"
     label = "Darkweb Service"
     color = "#6B728099"
     icon = "brand-tor"

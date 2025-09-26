@@ -3,6 +3,7 @@ from osintbuddy.elements import TextInput
 
 
 class Missile(ob.Plugin):
+    version = "1.0.0"
     label = "Missile"
     color = "#F9731699"
     icon = "rocket"
