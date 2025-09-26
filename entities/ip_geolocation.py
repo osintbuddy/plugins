@@ -11,11 +11,7 @@ class IPGeolocation(ob.Plugin):
     elements = [
         [
             TextInput(label="City", icon="map-pin"),
-            TextInput(label="ASN", icon="access-point"),
-        ],
-        [
             TextInput(label="State", icon="map-pin"),
-            TextInput(label="Hostname", icon="access-point"),
         ],
         [
             TextInput(label="Country", icon="map-pin"),
