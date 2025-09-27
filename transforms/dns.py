@@ -1,3 +1,6 @@
+import re, json
+from osintbuddy import transform, Registry
+
 _items = [
     "NS",
     "A",
@@ -31,12 +34,12 @@ def record(key, data):
         "text": _data,
     }
 
-@ob.transform(label="Extract IP", icon="microscope")
+@transform(target="dns@1.0.0", label="Extract IP", icon="microscope")
 async def transform_extract_ip(self, entity) -> list:
     data = entity.value
     ip_regexp = re.compile(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
     results = []
-    ip_address = await ob.Registry.get_entity('ip')
+    ip_address = await Registry.get_entity('ip@1.0.0')
     for ip in ip_regexp.findall(data):
         blueprint = ip_address.create(ip_address=ip)
         results.append(blueprint)

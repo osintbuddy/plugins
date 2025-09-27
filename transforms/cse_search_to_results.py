@@ -22,7 +22,7 @@ async def _map_cse_to_entity(resp):
     return entities
 
 
-async def get_cse_results(self, query, url, max_results=100):
+async def get_cse_results(query, url, max_results=100):
     parsed_url = urlparse(url)
     url_params = parse_qs(parsed_url.query)
     cx_param = url_params["cx"][0]
@@ -160,7 +160,7 @@ async def get_cse_results(self, query, url, max_results=100):
     label="To cse results", 
     icon="search"
 )
-async def to_cse_results(self, entity):
+async def to_cse_results(entity):
     if not entity.cse_categories:
         raise PluginError('The CSE Category field is required to transform.')
     cse_results = await get_cse_results(entity.query, entity.cse_categories, entity.max_results)

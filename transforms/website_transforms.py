@@ -64,10 +64,8 @@ async def to_whois(entity):
             ).text
         except Exception as e:
             print(e)
-            raise PluginError(
-                "Captcha encountered, please try again later."
-            )
-        whois_entity = await Registry.get_entity("whois")
+            raise PluginError("Captcha encountered, please try again later.")
+        whois_entity = await Registry.get_entity("whois@1.0.0")
         
         return whois_entity.create(
             whois_data="\n".join(_parse_whois(raw_whois)),
@@ -77,7 +75,7 @@ async def to_whois(entity):
 
 @transform(target="website@1.0.0", label="To DNS", icon="world")
 async def to_dns(self, entity):
-    dns_entity = await Registry.get_entity('dns')
+    dns_entity = await Registry.get_entity('dns@1.0.0')
     data = dns_entity.data_template()
 
     if len(entity.domain) == 0:
