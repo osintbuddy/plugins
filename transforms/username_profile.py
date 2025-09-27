@@ -7,7 +7,7 @@ from osintbuddy import transform, Registry
     icon="link"
 )
 async def to_url(self, entity):
-    url_entity = await Registry.get_plugin('url@1.0.0')
+    url_entity = await Registry.get_entity('url@1.0.0')
     url_node = url_entity.create(
         url=entity.profile_link
     )

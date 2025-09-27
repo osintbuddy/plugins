@@ -23,7 +23,7 @@ def _parse_whois(whois_data):
   icon="building-broadcast-tower"
 )
 async def to_ip(entity):
-    ip_address_plugin = await Registry.get_plugin('ip')
+    ip_address_plugin = await Registry.get_entity('ip')
     blueprint = ip_address_plugin.create(
         ip_address=socket.gethostbyname(entity.domain),
     )
@@ -32,11 +32,11 @@ async def to_ip(entity):
 @transform(target="website@1.0.0", label="To google", icon="world")
 async def to_google(self, entity):
     results = []
-    google_search_entity = await Registry.get_plugin('google_search@1.0.0')
+    google_search_entity = await Registry.get_entity('google_search@1.0.0')
     for result in await google_search_entity().search_google(
         query=entity.domain, pages="3"
     ):
-        google_result_entity = await Registry.get_plugin('google_result@1.0.0')
+        google_result_entity = await Registry.get_entity('google_result@1.0.0')
         blueprint = google_result_entity.create(
             result={
                 "title": result.get("title"),
@@ -67,7 +67,7 @@ async def to_whois(entity):
             raise PluginError(
                 "Captcha encountered, please try again later."
             )
-        whois_entity = await Registry.get_plugin("whois")
+        whois_entity = await Registry.get_entity("whois")
         
         return whois_entity.create(
             whois_data="\n".join(_parse_whois(raw_whois)),
@@ -77,7 +77,7 @@ async def to_whois(entity):
 
 @transform(target="website@1.0.0", label="To DNS", icon="world")
 async def to_dns(self, entity):
-    dns_entity = await Registry.get_plugin('dns')
+    dns_entity = await Registry.get_entity('dns')
     data = dns_entity.data_template()
 
     if len(entity.domain) == 0:

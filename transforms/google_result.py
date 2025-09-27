@@ -8,7 +8,7 @@ from urllib.parse import urlparse
     icon="world"
 )
 async def to_website(self, entity):
-    website_entity = await Registry.get_plugin('website@1.0.0')
+    website_entity = await Registry.get_entity('website@1.0.0')
     blueprint = website_entity.create(
         domain=urlparse(entity.url).netloc
     )

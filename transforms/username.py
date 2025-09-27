@@ -20,7 +20,7 @@ async def to_checkuser(self, entity):
         )
         records = driver.find_elements(By.XPATH, "/html/body/div/div/div/div/div/div[2]/div/div[2]/div/a")
         data = []
-        username_profile = await Registry.get_plugin('username_profile@1.0.0')
+        username_profile = await Registry.get_entity('username_profile@1.0.0')
         for elm in records:
             href = elm.get_attribute('href')
             text = elm.get_attribute('innerText')

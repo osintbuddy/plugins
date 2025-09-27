@@ -8,7 +8,7 @@ from osintbuddy.errors import PluginError
 
 async def _map_cse_to_entity(resp):
     entities = []
-    cse_search_result = await Registry.get_plugin('cse_result@1.0.0')
+    cse_search_result = await Registry.get_entity('cse_result@1.0.0')
     if results := resp.get("results"):
         for result in results:
             breadcrumb = result.get("breadcrumbUrl", {})

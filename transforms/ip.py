@@ -11,7 +11,7 @@ from osintbuddy import transform, Registry
 
 @transform(target="ip@1.0.0", label="To website", icon="world")
 async def to_website(self, entity):
-    website_entity = await Registry.get_plugin('website@1.0.0')
+    website_entity = await Registry.get_entity('website@1.0.0')
     try:
         resolved = socket.gethostbyaddr(entity.ip_address)
         if len(resolved) >= 1:
@@ -39,7 +39,7 @@ async def to_subdomains(self, entity):
             data = response.content.decode("utf8").split("\n")
     except Exception as e:
         raise PluginError(e)
-    subdomain_entity = await ob.Registry.get_plugin('subdomain')
+    subdomain_entity = await ob.Registry.get_entity('subdomain')
     for subdomain in data:
         blueprint = subdomain_entity.create(subdomain=subdomain)
         nodes.append(blueprint)
@@ -84,7 +84,7 @@ async def to_geolocation(self, entity):
             geolocation[to_camel_case(row)] = driver.find_element(
                 by=By.XPATH, value=self.get_geo_xpath(row)
             ).text
-    IPGeolocationPlugin = await Registry.get_plugin('ip_geolocation@1.0.0')
+    IPGeolocationPlugin = await Registry.get_entity('ip_geolocation@1.0.0')
     blueprint = IPGeolocationPlugin.create(
         city=geolocation.get("city"),
         state=geolocation.get("state"),

@@ -8,6 +8,6 @@ from osintbuddy import transform, Registry
     icon="world-www"
 )
 async def to_website(self, entity):
-    website_entity = await Registry.get_plugin('website')
+    website_entity = await Registry.get_entity('website')
     domain = urlparse(entity.url).netloc
     return website_entity.create(domain=domain)

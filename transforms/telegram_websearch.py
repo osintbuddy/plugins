@@ -7,7 +7,7 @@ from osintbuddy import transform, Registry
 )
 async def to_websearch(self, entity):
     print("ENTITY TO WEBSEARCH",  entity)
-    cse_search_entity = await Registry.get_plugin('cse_search')
+    cse_search_entity = await Registry.get_entity('cse_search')
     cse_plugin = cse_search_entity()
     results = []
     for url in self.telegram_cse_urls:

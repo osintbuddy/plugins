@@ -43,7 +43,7 @@ def _parse_google_data(results) -> dict:
 async def to_google_results(entity):
     # print("@todo refactor transform entity API: ", entity)
     results = []
-    google_result_entity = await Registry.get_plugin('google_result@1.0.0')
+    google_result_entity = await Registry.get_entity('google_result@1.0.0')
     for result in await search_google(entity.query, entity.pages):
         blueprint = google_result_entity.create(
             result={

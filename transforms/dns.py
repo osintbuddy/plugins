@@ -36,10 +36,11 @@ async def transform_extract_ip(self, entity) -> list:
     data = entity.value
     ip_regexp = re.compile(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
     results = []
-    IPAddressPlugin = await ob.Registry.get_plugin('ip')
+    ip_address = await ob.Registry.get_entity('ip')
     for ip in ip_regexp.findall(data):
-        blueprint = IPAddressPlugin.create(ip_address=ip)
+        blueprint = ip_address.create(ip_address=ip)
         results.append(blueprint)
     return results
+
 
 
