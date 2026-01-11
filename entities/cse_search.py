@@ -1,15 +1,9 @@
-import json
-from osintbuddy import Plugin
+from osintbuddy import Plugin, read_resource_json
 from osintbuddy.elements import TextInput, DropdownInput
 
-try:
-    import requests
-    resp = requests.get('https://gist.githubusercontent.com/jerlendds/741d110f59a7d2ed2098325d30b00569/raw/25c15621eb67845db4ad65fc4ea8d3ad0991356f/cses.json')
-    cses_db = json.loads(resp.text)
-except Exception as e:
-    print(e)
-    cses_db = []
 
+# cses_db = read_resource_json(__file__, "cses.json", default=[])
+cses_db = []
 
 class GoogleCSESearch(Plugin):
     version = "1.0.0"
@@ -27,6 +21,8 @@ class GoogleCSESearch(Plugin):
             DropdownInput(label="Max Results", value={"label": "100"}, options=[
                 { "label": "10" },
                 { "label": "20" },
+
+
                 { "label": "30" },
                 { "label": "40" },
                 { "label": "50" },
