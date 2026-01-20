@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class MacAddress(ob.Plugin):
     version = "1.0.0"
     label = "MAC Address"
+    category = "Network"
     color = "#94A3B899"
     icon = "cpu"
     author = "OSIB"

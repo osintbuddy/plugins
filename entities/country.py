@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class Country(ob.Plugin):
     version = "1.0.0"
     label = "Country"
+    category = "Locations"
     color = "#F59E0B99"
     icon = "flag"
     author = "OSIB"

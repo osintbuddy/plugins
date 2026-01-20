@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class HTTPHeaders(ob.Plugin):
     version = "1.0.0"
     label = "HTTP Headers"
+    category = "Web"
     color = "#8B5CF699"
     icon = "brackets"
     author = "OSIB"

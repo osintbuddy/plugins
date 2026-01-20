@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class Bike(ob.Plugin):
     version = "1.0.0"
     label = "Bike"
+    category = "Transportation"
     color = "#22C55E99"
     icon = "bike"
     author = "OSIB"

@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class ReligiousGroup(ob.Plugin):
     version = "1.0.0"
     label = "Religious Group"
+    category = "Organizations"
     color = "#22C55E99"
     icon = "building-church"
     author = "OSIB"

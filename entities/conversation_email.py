@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class ConversationEmail(ob.Plugin):
     version = "1.0.0"
     label = "Conversation Email"
+    category = "Communications"
     color = "#A78BFA99"
     icon = "mail"
     author = "OSIB"

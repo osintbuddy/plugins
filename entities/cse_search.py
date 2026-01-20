@@ -8,6 +8,7 @@ class GoogleCSESearch(Plugin):
     version = "1.0.0"
 
     label = "CSE Search"
+    category = "Search"
     description = 'Search through hundreds of categorized custom search engines from Google'
     author = "OSIB"
 

@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class CloudBucket(ob.Plugin):
     version = "1.0.0"
     label = "Cloud Bucket"
+    category = "Web"
     color = "#10B98199"
     icon = "bucket"
     author = "OSIB"

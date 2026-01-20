@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class PGPKey(ob.Plugin):
     version = "1.0.0"
     label = "PGP Key"
+    category = "Documents"
     color = "#22C55E99"
     icon = "key"
     author = "OSIB"

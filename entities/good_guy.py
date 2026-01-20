@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class GoodGuy(ob.Plugin):
     version = "1.0.0"
     label = "Good Guy"
+    category = "Identity"
     color = "#22C55E99"
     icon = "user-plus"
     author = "OSIB"

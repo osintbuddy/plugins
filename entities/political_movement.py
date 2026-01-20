@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class PoliticalMovement(ob.Plugin):
     version = "1.0.0"
     label = "Political Movement"
+    category = "Organizations"
     color = "#60A5FA99"
     icon = "flag"
     author = "OSIB"

@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class BusinessLeader(ob.Plugin):
     version = "1.0.0"
     label = "Business Leader"
+    category = "Identity"
     color = "#F59E0B99"
     icon = "briefcase"
     author = "OSIB"

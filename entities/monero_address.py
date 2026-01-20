@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class MoneroAddress(ob.Plugin):
     version = "1.0.0"
     label = "Monero Address"
+    category = "Cryptocurrency"
     color = "#FB923C99"
     icon = "currency"
     author = "OSIB"

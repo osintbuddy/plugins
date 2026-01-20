@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class CompanyProfile(ob.Plugin):
     version = "1.0.0"
     label = "Company Profile"
+    category = "Organizations"
     color = "#F59E0B99"
     icon = "building"
     author = "OSIB"

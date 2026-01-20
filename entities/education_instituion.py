@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class EducationInstituion(ob.Plugin):
     version = "1.0.0"
     label = "Education Instituion"
+    category = "Organizations"
     color = "#A78BFA99"
     icon = "school"
     author = "OSIB"

@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class PassportNumber(ob.Plugin):
     version = "1.0.0"
     label = "Passport Number"
+    category = "Identity"
     color = "#94A3B899"
     icon = "id"
     author = "OSIB"

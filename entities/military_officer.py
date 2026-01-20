@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class MilitaryOfficer(ob.Plugin):
     version = "1.0.0"
     label = "Military Officer"
+    category = "Identity"
     color = "#60A5FA99"
     icon = "military-rank"
     author = "OSIB"

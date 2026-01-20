@@ -5,6 +5,7 @@ import osintbuddy as ob
 class IPGeolocation(ob.Plugin):
     version = "1.0.0"
     label = "IP Geolocation"
+    category = "Network"
     is_available = False
     icon = "map-pin"
     author = "OSIB"

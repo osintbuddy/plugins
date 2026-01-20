@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class Meeting(ob.Plugin):
     version = "1.0.0"
     label = "Meeting"
+    category = "Events"
     color = "#22C55E99"
     icon = "calendar"
     author = "OSIB"

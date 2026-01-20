@@ -6,6 +6,7 @@ class TelegramWebsearch(Plugin):
     version = "1.0.0"
  
     label = "Telegram CSE Search"
+    category = "Search"
     author = "OSIB"
     description = "CSE search for telegram communities"
 

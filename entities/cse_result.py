@@ -6,6 +6,7 @@ class CSESearchResult(Plugin):
     version = "1.0.0"
 
     label = "CSE Result"
+    category = "Search"
     color = "#59A12866"
     icon = "brand-google"
     author = "OSIB"

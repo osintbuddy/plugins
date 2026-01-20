@@ -4,6 +4,7 @@ from osintbuddy.elements import TextInput
 class GoogleSearch(Plugin):
     version = "1.0.0"
     label = "Google Search"
+    category = "Search"
     color = "#3D78D999"
     elements = [
         TextInput(label="Query", icon="search"),

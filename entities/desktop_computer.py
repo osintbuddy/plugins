@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class DesktopComputer(ob.Plugin):
     version = "1.0.0"
     label = "Desktop Computer"
+    category = "Devices"
     color = "#22D3EE99"
     icon = "device-desktop"
     author = "OSIB"

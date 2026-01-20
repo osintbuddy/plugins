@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class GangMember(ob.Plugin):
     version = "1.0.0"
     label = "Gang Member"
+    category = "Identity"
     color = "#FB718599"
     icon = "user"
     author = "OSIB"

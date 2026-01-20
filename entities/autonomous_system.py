@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class AutonomousSystem(ob.Plugin):
     version = "1.0.0"
     label = "Autonomous System"
+    category = "Network"
     color = "#06B6D499"
     icon = "router"
     author = "OSIB"

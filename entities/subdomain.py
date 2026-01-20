@@ -5,6 +5,7 @@ import osintbuddy as ob
 class Subdomain(ob.Plugin):
     version = "1.0.0"
     label = "Subdomain"
+    category = "Web"
     is_available = True
     description = "A domain that is a part of another domain"
     color = "#093FB499"

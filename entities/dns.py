@@ -8,6 +8,7 @@ import osintbuddy as ob
 class DNS(ob.Plugin):
     version = "1.0.0"
     label = "DNS"
+    category = "Network"
     color = "#88304E99"
     icon = "creative-commons-nd"
     description = "The Domain Name System translates domains into IPs"

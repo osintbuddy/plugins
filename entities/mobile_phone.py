@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class MobilePhone(ob.Plugin):
     version = "1.0.0"
     label = "Mobile Phone"
+    category = "Devices"
     color = "#22C55E99"
     icon = "device-mobile"
     author = "OSIB"

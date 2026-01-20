@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class TransportHub(ob.Plugin):
     version = "1.0.0"
     label = "Transport Hub"
+    category = "Locations"
     color = "#9CA3AF99"
     icon = "building-stadium"
     author = "OSIB"

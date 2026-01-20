@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class DrugDealer(ob.Plugin):
     version = "1.0.0"
     label = "Drug Dealer"
+    category = "Identity"
     color = "#F43F5E99"
     icon = "user-minus"
     author = "OSIB"

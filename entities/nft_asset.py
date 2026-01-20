@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class NFTAsset(ob.Plugin):
     version = "1.0.0"
     label = "NFT Asset"
+    category = "Cryptocurrency"
     color = "#A855F799"
     icon = "photo-up"
     author = "OSIB"

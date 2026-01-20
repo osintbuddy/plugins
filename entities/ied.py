@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class IED(ob.Plugin):
     version = "1.0.0"
     label = "IED"
+    category = "Weapons"
     color = "#F9731699"
     icon = "flame"
     author = "OSIB"

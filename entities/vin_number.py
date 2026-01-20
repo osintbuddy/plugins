@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class VinNumber(ob.Plugin):
     version = "1.0.0"
     label = "VIN Number"
+    category = "Transportation"
     color = "#9CA3AF99"
     icon = "hash"
     author = "OSIB"

@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class Blade(ob.Plugin):
     version = "1.0.0"
     label = "Blade"
+    category = "Weapons"
     color = "#94A3B899"
     icon = "knife"
     author = "OSIB"

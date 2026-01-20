@@ -5,6 +5,7 @@ from osintbuddy.elements import UploadFileInput, TextInput
 class MetadataEXIF(ob.Plugin):
     version = "1.0.0"
     label = "Metadata EXIF"
+    category = "Documents"
     color = "#94A3B899"
     icon = "photo"
     author = "OSIB"

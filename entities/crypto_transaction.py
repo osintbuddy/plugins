@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class CryptoTransaction(ob.Plugin):
     version = "1.0.0"
     label = "Crypto Transaction"
+    category = "Cryptocurrency"
     color = "#F59E0B99"
     icon = "currency"
     author = "OSIB"

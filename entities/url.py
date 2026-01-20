@@ -8,6 +8,7 @@ class URL(Plugin):
     version = "1.0.0"
 
     label = 'URL'
+    category = "Web"
     author = 'OSIB'
     description = 'Uniform Resource Locator, usually starts with https://'
 

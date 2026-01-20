@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class FileHash(ob.Plugin):
     version = "1.0.0"
     label = "File Hash"
+    category = "Documents"
     color = "#F9731699"
     icon = "hash"
     author = "OSIB"

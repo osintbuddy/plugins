@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class FlightNumber(ob.Plugin):
     version = "1.0.0"
     label = "Flight Number"
+    category = "Transportation"
     color = "#38BDF899"
     icon = "plane"
     author = "OSIB"

@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class DeFiContract(ob.Plugin):
     version = "1.0.0"
     label = "DeFi Contract"
+    category = "Cryptocurrency"
     color = "#8B5CF699"
     icon = "brand-ethereum"
     author = "OSIB"

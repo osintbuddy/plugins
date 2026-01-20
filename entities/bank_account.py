@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class BankAccount(ob.Plugin):
     version = "1.0.0"
     label = "Bank Account"
+    category = "Finance"
     color = "#06B6D499"
     icon = "building-bank"
     author = "OSIB"

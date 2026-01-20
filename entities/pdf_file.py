@@ -5,6 +5,7 @@ from osintbuddy.elements import UploadFileInput
 class PDF(ob.Plugin):
     version = "1.0.0"
     label = "PDF Uploads"
+    category = "Documents"
     color = '#7a1f1f99'
     icon = "file-type-pdf"
     author = "OSIB"

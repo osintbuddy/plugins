@@ -5,6 +5,7 @@ from osintbuddy.elements import TextAreaInput
 class Unknown(ob.Plugin):
     version = "1.0.0"
     label = "Unknown"
+    category = "Generic"
     color = "#D1D5DB99"
     icon = "question-mark"
     author = "OSIB"

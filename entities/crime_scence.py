@@ -5,6 +5,7 @@ from osintbuddy.elements import TextInput
 class CrimeScence(ob.Plugin):
     version = "1.0.0"
     label = "Crime Scence"
+    category = "Events"
     color = "#EF444499"
     icon = "alert-triangle"
     author = "OSIB"

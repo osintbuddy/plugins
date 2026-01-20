@@ -10,6 +10,7 @@ class Website(ob.Plugin):
     version = "1.0.0"
 
     label = "Website"
+    category = "Web"
     description = "Represents a domain from a website on the internet"
     author = "OSIB"
     
