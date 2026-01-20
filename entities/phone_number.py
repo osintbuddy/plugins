@@ -5,7 +5,7 @@ from osintbuddy.elements import TextInput
 class PhoneNumber(ob.Plugin):
     version = "1.0.0"
     label = "Phone Number"
-    category = "Identity"
+    category = ["Identity", "Communications"]
     color = "#10B98199"
     icon = "phone"
     author = "OSIB"

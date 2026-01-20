@@ -5,7 +5,7 @@ from osintbuddy.elements import TextInput, UploadFileInput
 class BreachData(ob.Plugin):
     version = "1.0.0"
     label = "Breach Data"
-    category = "Threat Intelligence"
+    category = ["Threat Intelligence", "Documents"]
     color = "#EF444499"
     icon = "database-exclamation"
     author = "OSIB"

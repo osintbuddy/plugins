@@ -5,7 +5,7 @@ from osintbuddy.elements import TextInput
 class Ports(ob.Plugin):
     version = "1.0.0"
     label = "Ports"
-    category = "Network"
+    category = ["Locations", "Transportation"]
     color = "#0EA5E999"
     icon = "plug"
     author = "OSIB"

@@ -5,7 +5,7 @@ from osintbuddy.elements import TextInput
 class OnlineGroup(ob.Plugin):
     version = "1.0.0"
     label = "Online Group"
-    category = "Social Media"
+    category = ["Social Media", "Organizations"]
     color = "#A78BFA99"
     icon = "users"
     author = "OSIB"

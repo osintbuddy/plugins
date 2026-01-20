@@ -5,7 +5,7 @@ from osintbuddy.elements import TextInput
 class EmailAddress(ob.Plugin):
     version = "1.0.0"
     label = "Email Address"
-    category = "Identity"
+    category = ["Identity", "Communications"]
     color = "#0D948899"
     icon = "at"
     author = "OSIB"

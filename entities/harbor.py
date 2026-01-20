@@ -5,7 +5,7 @@ from osintbuddy.elements import TextInput
 class Harbor(ob.Plugin):
     version = "1.0.0"
     label = "Harbor"
-    category = "Locations"
+    category = ["Locations", "Transportation"]
     color = "#38BDF899"
     icon = "anchor"
     author = "OSIB"
