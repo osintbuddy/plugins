@@ -1,16 +1,16 @@
-from osintbuddy.elements import TextInput
 from osintbuddy import transform, Registry, utils
-
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
 @transform(
     target="username@1.0.0",
     label='To checkuser.vercel.app',
-    icon='user'
+    icon='user',
+    deps=["selenium==4.41.0"]
 )
 async def to_checkuser(self, entity):
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.common.by import By
+
     with utils.get_driver() as driver:
         driver.get('https://checkuser.vercel.app/')
         driver.find_element(By.XPATH, "/html/body/div/div/div/div/div/div[1]/div/div/input").send_keys(entity.username)
