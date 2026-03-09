@@ -47,6 +47,26 @@ Transforms are **operations on entities** that produce new entities (edges in th
 
 Both entities and transforms are built with the `osintbuddy` framework package. See the [framework README](https://github.com/osintbuddy/framework/blob/main/README.md) and its [docs/](https://github.com/osintbuddy/framework/blob/main/docs/getting-started.md) for the full API reference.
 
+## Contributing
+
+These plugins are loaded automatically by the OSINTBuddy application for standalone use and demonstration purposes. Feel free to fork and improve anything you desire, we're open to community contributions in this repo :)
+
+---
+
+## License
+
+**MIT.**
+
+See [LICENSE](LICENSE) for details.
+
+## Links
+
+- [OSINTBuddy Releases](https://github.com/osintbuddy/osintbuddy/releases)
+- [Plugins Framework (PyPI)](https://pypi.org/project/osintbuddy/)
+- [Plugins Issue Tracker](https://github.com/osintbuddy/plugins/issues)
+- [Electron Issue Tracker](https://github.com/osintbuddy/osintbuddy/issues)
+- [Framework Issue Tracker](https://github.com/osintbuddy/framework/issues)
+ 
 ## Available Entities
 
 | Entity                   | ID                             | Category                       | Description                                                                                                                            | File                                 |
