@@ -1,4 +1,4 @@
-# OSIB Official: Plugins Reloaded
+# OSIB: Official Plugins Reloaded
 
 > _I have no data yet. It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts._
 
@@ -66,7 +66,7 @@ See [LICENSE](LICENSE) for details.
 - [Plugins Issue Tracker](https://github.com/osintbuddy/plugins/issues)
 - [Electron Issue Tracker](https://github.com/osintbuddy/osintbuddy/issues)
 - [Framework Issue Tracker](https://github.com/osintbuddy/framework/issues)
- 
+
 ## Available Entities
 
 | Entity                   | ID                             | Category                       | Description                                                                                                                            | File                                 |
